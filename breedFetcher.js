@@ -7,7 +7,6 @@ const fetchBreedDescription = function(breedName, callback) {
     `https://api.thecatapi.com/v1/breeds/search?q=${breedCode}`,
     (err, response, body) => {
       if (err) {
-        console.log('response:', response);
         callback(err, response.statusCode);
       }
       const data = JSON.parse(body);
